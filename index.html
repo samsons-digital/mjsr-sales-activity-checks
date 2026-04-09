@@ -31,10 +31,7 @@ body {
 
 /* ── NAV ── */
 .top-bar {
-  background: var(--deep);
-  background-image:
-    radial-gradient(ellipse at 10% 50%, rgba(27,67,50,0.5) 0%, transparent 55%),
-    radial-gradient(ellipse at 90% 30%, rgba(72,202,228,0.12) 0%, transparent 50%);
+  background: #1e3a5f;
   padding: 0 24px;
   display: flex;
   align-items: stretch;
@@ -42,19 +39,19 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 14px 20px 14px 0;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.12);
   margin-right: 8px;
 }
 .brand-icon {
   width: 36px; height: 36px;
-  background: linear-gradient(135deg, var(--pine), var(--mid));
+  background: #2a4d7a;
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-size: 18px;
@@ -67,7 +64,7 @@ body {
   text-transform: uppercase; line-height: 1;
 }
 .brand-sub {
-  font-size: 10px; color: var(--muted);
+  font-size: 10px; color: rgba(255,255,255,0.5);
   letter-spacing: 1px; text-transform: uppercase;
   margin-top: 2px;
 }
@@ -78,13 +75,13 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px; font-weight: 700;
   letter-spacing: 1px; text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.45);
   cursor: pointer; border: none; background: none;
   border-bottom: 3px solid transparent;
   transition: all 0.2s;
   white-space: nowrap;
 }
-.nav-tab:hover { color: rgba(255,255,255,0.75); }
+.nav-tab:hover { color: rgba(255,255,255,0.8); }
 .nav-tab.active { color: var(--ice); border-bottom-color: var(--ice); }
 .nav-tab .tab-icon { font-size: 15px; }
 
@@ -113,32 +110,44 @@ body {
 .section-hdr {
   padding: 12px 18px;
   display: flex; align-items: center; gap: 10px;
+  background: var(--snow);
+  border-bottom: 2px solid var(--border);
 }
-.section-hdr.session  { background: var(--deep); }
-.section-hdr.booths   { background: var(--deep); }
-.section-hdr.egates   { background: var(--indigo); }
-.section-hdr.acts     { background: var(--pine); }
-.section-hdr.cert-hdr { background: var(--purple); }
+.section-hdr.session  { border-bottom-color: var(--deep); }
+.section-hdr.booths   { border-bottom-color: var(--deep); }
+.section-hdr.egates   { border-bottom-color: var(--indigo); }
+.section-hdr.acts     { border-bottom-color: var(--pine); }
+.section-hdr.cert-hdr { border-bottom-color: var(--purple); }
 .s-icon {
   width: 30px; height: 30px;
   border-radius: 6px;
-  background: rgba(255,255,255,0.12);
   display: flex; align-items: center; justify-content: center;
   font-size: 14px; flex-shrink: 0;
 }
+.section-hdr.session  .s-icon { background: var(--deep);   }
+.section-hdr.booths   .s-icon { background: var(--deep);   }
+.section-hdr.egates   .s-icon { background: var(--indigo); }
+.section-hdr.acts     .s-icon { background: var(--pine);   }
+.section-hdr.cert-hdr .s-icon { background: var(--purple); }
+.s-icon { color: #fff; }
 .s-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 1px; color: #fff;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--deep);
 }
-.s-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+.s-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
 .s-badge {
   margin-left: auto;
-  background: rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.7);
   font-size: 10px; font-weight: 700;
   padding: 2px 8px; border-radius: 20px;
+  color: #fff;
 }
+.section-hdr.session  .s-badge { background: var(--deep);   }
+.section-hdr.booths   .s-badge { background: var(--deep);   }
+.section-hdr.egates   .s-badge { background: var(--indigo); }
+.section-hdr.acts     .s-badge { background: var(--pine);   }
+.section-hdr.cert-hdr .s-badge { background: var(--purple); }
 
 /* Field rows */
 .field-grid {
@@ -298,7 +307,7 @@ textarea.f-input { resize: vertical; min-height: 60px; }
 
 /* Progress & summary bar */
 .progress-bar-wrap {
-  background: var(--deep);
+  background: #1e3a5f;
   border-radius: 10px;
   padding: 16px 20px;
   display: flex; align-items: center; gap: 20px;
@@ -681,7 +690,7 @@ textarea.f-input { resize: vertical; min-height: 60px; }
 // ════════════════════════════════════════════
 // CONFIG — UPDATE SCRIPT URL BEFORE DEPLOYING
 // ════════════════════════════════════════════
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8loQIr9DFz8q1Pe_8gLYVzecRLk_RVl6Y1wM9agzFYdrbXcdDaPochMw0lINkfw3y/exec';
+const SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
 const PIN        = '1234';
 
 // ════════════════════════════════════════════
